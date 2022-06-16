@@ -1,0 +1,8 @@
+demo/
+node_modules/
+dist/
+.DS_Store
+.vscode/
+.eslintcache
+.idea/
+.history
