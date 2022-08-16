@@ -4,7 +4,7 @@
 
 ## 使用
 
-1. 通过 [hkt-cli](https://www.npmjs.com/package/hkt-cli) 工具自动生成配置（暂未引用本规则🐞）
+1. 通过 [hkt-cli](https://www.npmjs.com/package/hkt-cli) 工具自动生成配置
 
 2. 目前手动接入，可以在下方查找自己项目类型所需安装的依赖和 [ESLint 配置](https://eslint.org/docs/user-guide/configuring)：
 
