@@ -1,6 +1,6 @@
 {
   "name": "@hkt/eslint-rules",
-  "version": "0.0.6",
+  "version": "0.0.8",
   "description": "The ESLint rule I usually use",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mamba-1024/first-rule.git"
+    "url": "https://github.com/mamba-1024/first-rule"
   },
   "publishConfig": {
     "access": "public",

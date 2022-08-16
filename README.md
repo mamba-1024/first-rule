@@ -26,9 +26,9 @@ npm i -D @hkt/eslint-rules @babel/core @babel/eslint-parser eslint-plugin-import
 
 #### 配置
 
-```json
-{
-  "extends": ["@hkt/eslint-rules"]
+```js
+module.exports = {
+  ...require("@hkt/eslint-rules")
 }
 ```
 
@@ -53,10 +53,15 @@ npm i -D @hkt/eslint-rules @babel/core @babel/eslint-parser eslint-plugin-import
 
 #### 配置
 
-```json
-{
-  "extends": ["@hkt/eslint-rules/react", "@hkt/eslint-rules/jsx-a11y"]
-}
+```js
+const rule = require('@hkt/eslint-rules/react');
+const jsxA11y = require('@hkt/eslint-rules/jsx-a11y');
+
+module.exports = {
+  ...rule,
+  extends: [...rule.extends, ...jsxA11y.extends],
+};
+
 ```
 
 ### JavaScript + Vue 项目 - @hkt/eslint-rules/vue
@@ -79,9 +84,9 @@ npm i -D @hkt/eslint-rules @babel/core @babel/eslint-parser eslint-plugin-import
 
 #### 配置
 
-```json
-{
-  "extends": ["@hkt/eslint-rules/vue"]
+```js
+module.exports = {
+  ...require("@hkt/eslint-rules/vue")
 }
 ```
 
@@ -104,17 +109,17 @@ npm i -D @hkt/eslint-rules @typescript-eslint/parser @typescript-eslint/eslint-p
 
 #### 配置
 
-```json
-{
-  "extends": ["@hkt/eslint-rules/typescript"]
+```js
+module.exports = {
+  ...require("@hkt/eslint-rules/typescript")
 }
 ```
 
 需保证项目已安装 `typescript` 依赖，另外如果项目的 TS 配置文件不是 `./tsconfig.json`，则需要设置 `.eslintrc` 中的 [parserOptions.project](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser#parseroptionsproject) 字段 ，例如：
 
-```json
-{
-  "extends": "@hkt/eslint-rules/typescript",
+```js
+module.exports = {
+  ...require("@hkt/eslint-rules/typescript")
   "parserOptions": {
     "project": "./tsconfig.eslint.json"
   }
@@ -143,13 +148,15 @@ npm i -D @hkt/eslint-rules @typescript-eslint/parser @typescript-eslint/eslint-p
 
 #### 配置
 
-```json
-{
-  "extends": [
-    "@hkt/eslint-rules/typescript/react",
-    "@hkt/eslint-rules/jsx-a11y"
-  ]
-}
+```js
+const rule = require('@hkt/eslint-rules/typescript/react');
+const jsxA11y = require('@hkt/eslint-rules/jsx-a11y');
+
+module.exports = {
+  ...rule,
+  extends: [...rule.extends, ...jsxA11y.extends],
+};
+
 ```
 
 ### TypeScript + Vue 项目 - @hkt/eslint-rules/typescript/vue
@@ -173,9 +180,9 @@ npm i -D @hkt/eslint-rules @typescript-eslint/parser @typescript-eslint/eslint-p
 
 #### 配置
 
-```json
-{
-  "extends": ["@hkt/eslint-rules/typescript/vue"]
+```js
+module.exports ={
+  ...require("@hkt/eslint-rules/typescript/vue")
 }
 ```
 
@@ -194,10 +201,11 @@ npm install --save-dev eslint-config-prettier eslint-plugin-prettier
 
 并修改 `.eslintrc` 的 `extends` 配置，增加 `prettier`，如下（以 TS React 项目为例）：
 
-```json
-{
-  "extends": ["@hkt/eslint-rules/typescript/react", "prettier"]
-}
+```js
+module.exports = {
+  ...require("@hkt/eslint-rules/typescript/react"),
+  extends: [...require("@hkt/eslint-rules/typescript/react").extends, "prettier"],
+};
 ```
 
 了解更多请阅读 [Prettier - Integrating with Linters](https://prettier.io/docs/en/integrating-with-linters.html)。
