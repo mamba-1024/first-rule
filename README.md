@@ -28,7 +28,7 @@ npm i -D @hkt/eslint-rules @babel/core @babel/eslint-parser eslint-plugin-import
 
 ```js
 module.exports = {
-  ...require("@hkt/eslint-rules")
+  extends: ['./node_modules/@hkt/eslint-rules/index.js']
 }
 ```
 
@@ -54,12 +54,8 @@ npm i -D @hkt/eslint-rules @babel/core @babel/eslint-parser eslint-plugin-import
 #### 配置
 
 ```js
-const rule = require('@hkt/eslint-rules/react');
-const jsxA11y = require('@hkt/eslint-rules/jsx-a11y');
-
 module.exports = {
-  ...rule,
-  extends: [...rule.extends, ...jsxA11y.extends],
+  extends: ['./node_modules/@hkt/eslint-rules/react.js', './node_modules/@hkt/eslint-rules/jsx-a11y.js'],
 };
 
 ```
@@ -86,7 +82,7 @@ npm i -D @hkt/eslint-rules @babel/core @babel/eslint-parser eslint-plugin-import
 
 ```js
 module.exports = {
-  ...require("@hkt/eslint-rules/vue")
+  extends: ['./node_modules/@hkt/eslint-rules/vue.js'],
 }
 ```
 
@@ -111,7 +107,7 @@ npm i -D @hkt/eslint-rules @typescript-eslint/parser @typescript-eslint/eslint-p
 
 ```js
 module.exports = {
-  ...require("@hkt/eslint-rules/typescript")
+  extends: ['./node_modules/@hkt/eslint-rules/typescript/index.js'],
 }
 ```
 
@@ -119,7 +115,7 @@ module.exports = {
 
 ```js
 module.exports = {
-  ...require("@hkt/eslint-rules/typescript")
+  extends: ['./node_modules/@hkt/eslint-rules/typescript/index.js'],
   "parserOptions": {
     "project": "./tsconfig.eslint.json"
   }
@@ -149,12 +145,8 @@ npm i -D @hkt/eslint-rules @typescript-eslint/parser @typescript-eslint/eslint-p
 #### 配置
 
 ```js
-const rule = require('@hkt/eslint-rules/typescript/react');
-const jsxA11y = require('@hkt/eslint-rules/jsx-a11y');
-
 module.exports = {
-  ...rule,
-  extends: [...rule.extends, ...jsxA11y.extends],
+  extends: ['./node_modules/@hkt/eslint-rules/typescript/react.js', './node_modules/@hkt/eslint-rules/jsx-a11y.js'],
 };
 
 ```
@@ -182,7 +174,7 @@ npm i -D @hkt/eslint-rules @typescript-eslint/parser @typescript-eslint/eslint-p
 
 ```js
 module.exports ={
-  ...require("@hkt/eslint-rules/typescript/vue")
+  extends: ['./node_modules/@hkt/eslint-rules/typescript/vue.js'],
 }
 ```
 
@@ -203,8 +195,7 @@ npm install --save-dev eslint-config-prettier eslint-plugin-prettier
 
 ```js
 module.exports = {
-  ...require("@hkt/eslint-rules/typescript/react"),
-  extends: [...require("@hkt/eslint-rules/typescript/react").extends, "prettier"],
+  extends: ["./node_modules/@hkt/eslint-rules/typescript/react.js", "prettier"],
 };
 ```
 
