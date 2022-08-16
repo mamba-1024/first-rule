@@ -1,5 +1,5 @@
 module.exports = {
   extends: [
-    './index',
+    './rules/jsx-a11y',
   ].map(require.resolve),
 };

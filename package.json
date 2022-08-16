@@ -1,21 +1,39 @@
 {
   "name": "@hkt/eslint-rules",
-  "version": "1.0.0",
+  "version": "0.0.4",
   "description": "The ESLint rule I usually use",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "ketong",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mamba-1024/first-rule.git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "author": "huangketong",
+  "license": "MIT",
+  "peerDependencies": {
+    "eslint": ">=6.8.0"
+  },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.28.0",
     "@typescript-eslint/parser": "^5.28.0",
     "eslint": "^8.17.0",
-    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.30.0",
-    "eslint-plugin-react-hooks": "^4.6.0"
-  }
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^2.7.1",
+    "typescript": "^4.7.3"
+  },
+  "bugs": {
+    "url": "https://github.com/mamba-1024/first-rule/issues"
+  },
+  "homepage": "https://github.com/mamba-1024/first-rule#readme",
+  "dependencies": {}
 }
