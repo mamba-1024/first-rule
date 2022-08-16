@@ -1,3 +1,4 @@
+// 备份文件
 module.exports = {
   'import/no-unresolved': 0,
   'import/extensions': 0,
