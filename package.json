@@ -1,6 +1,6 @@
 {
   "name": "@hkt/eslint-rules",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "The ESLint rule I usually use",
   "main": "index.js",
   "scripts": {
