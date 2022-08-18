@@ -48,7 +48,7 @@ module.exports = {
 #### 安装
 
 ```
-npm i -D @hkt/eslint-rules @babel/core @babel/eslint-parser eslint-plugin-import eslint-plugin-react eslint-plugin-react-hooks
+npm i -D @hkt/eslint-rules @babel/core @babel/eslint-parser eslint-plugin-import eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-jsx-a11y
 ```
 
 #### 配置
@@ -139,7 +139,7 @@ module.exports = {
 #### 安装
 
 ```
-npm i -D @hkt/eslint-rules @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-import eslint-import-resolver-typescript eslint-plugin-react eslint-plugin-react-hooks
+npm i -D @hkt/eslint-rules @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-import eslint-import-resolver-typescript eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-jsx-a11y
 ```
 
 #### 配置
