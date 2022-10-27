@@ -1,5 +1,8 @@
 # @hkt/eslint-rules
 
+
+[![OSCS Status](https://www.oscs1024.com/platform/badge/mamba-1024/first-rule.svg?size=small)](https://www.oscs1024.com/project/mamba-1024/first-rule?ref=badge_small)
+
 [@hkt/eslint-rules](https://github.com/mamba-1024/first-rule)配套的 [ESLint 可共享配置](http://eslint.org/docs/developer-guide/shareable-configs.html)，提供了多套配置文件以支持 JavaScript、TypeScript、React、Vue、Node.js 等多种项目类型。
 
 ## 使用
